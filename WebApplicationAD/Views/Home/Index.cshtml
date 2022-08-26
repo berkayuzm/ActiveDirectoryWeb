@@ -1,0 +1,145 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .form-container{
+        height:400;
+        width:50%;
+        background-color: #EAF6F6;
+        -webkit-box-shadow: 1px 2px 28px 3px rgba(0,0,0,0.54);
+        box-shadow: 1px 2px 28px 3px rgba(0,0,0,0.54);
+        padding-right:50px;
+        padding-left:50px
+    }
+    .form-out-container{
+      
+    } 
+    .main-form{
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.27 );
+backdrop-filter: blur( 8px );
+-webkit-backdrop-filter: blur( 8px );
+border-radius: 20px;
+  display: flex;
+  flex-direction:column;
+  padding:3em;
+  justify-content:center;
+   position: absolute; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}
+button:hover{
+  color:#fff;
+  background: linear-gradient(10deg,rgba(231,66,124,0.4),rgba(107,206,226,0.4));
+box-shadow: 0 2px 12px 0 rgba(231,66,124,0.4);
+backdrop-filter: blur( 6px );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:rgba(231,66,124,0.4);
+  
+  
+}
+button:active{
+  transform:translatey(1.5px);
+  
+}
+button{
+  transition: all 100ms;
+  text-align:center;
+  padding:14px 20px 14px 20px;
+  border-radius: 6px;
+  border: none;
+  margin-top:10px;
+  outline: none;
+  font-size: 24px;
+  background: rgba( 255, 255, 255, 0.30 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+  font-family: 'Open Sans', sans-serif;
+  font-weight:bold;
+   background: -webkit-linear-gradient(10deg,#DD387B,#74D1E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.inp::placeholder{
+  /* color:rgba(255,0,0,0.35);*/
+ background: -webkit-linear-gradient(10deg,#DD387B,#74D1E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:bold;
+}
+.inp
+{transition: all 100ms;
+    font-family: 'Open Sans', sans-serif;
+  font-weight:600;
+  height: 45px;
+  margin:20px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+  padding-left: 20px;
+}
+
+.inp:focus
+{
+  background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1.0px );
+-webkit-backdrop-filter: blur( 1.0px );
+}
+
+body{
+        
+       background-color: #4158D0;
+       background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+@@media only screen and (max-width: 670px) {
+  body {
+    background-color: lightblue;
+     background-size: auto;
+  }
+}
+@@media only screen and (orientation:portrait){
+  .main-form{
+    margin:auto;
+    padding: 1.5em;
+  }
+}
+</style>
+@*<div class="form-out-container  d-flex justify-content-center">
+    <div class="form-container">
+        <div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <form method="post" asp-controller="Home" asp-action="Index">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Kullanıcı Adı</label>
+                    <input type="text" class="form-control"  placeholder="Kullanıcı Adı" name="kullaniciadi">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Giriş</button>
+            </form>
+        </div>
+        </div>
+</div>*@
+<div class="main-form">
+    <form method="post" asp-controller="Home" asp-action="Index">
+        <div><input type="text" class="inp" placeholder="Username" name="kullaniciadi"></div>
+        <div><input type="password" class="inp" id="inputpswd" placeholder="Password" name="password"></div>
+        <div style=" text-align:center;"> <button>Submit</button></div>
+    </form>
+</div>
+
